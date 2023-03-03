@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% for post in posts: %}
+    <div class="posts">
+            <p class="header-text"><spam>{{post.autor}} </spam>in {{post.date}}</p>
+            <h1 class="title-text">{{ post.title}}</h1>
+            <h4 class="content-text">{{post.content}}</h4>
+        </div>
+    {% endfor %}
+
+{% endblock content%}

@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Monocraft';
+}
+:root{
+    /* CSS HEX */
+--vivid-burgundy: #a4243bff;
+--ecru: #d8c99bff;
+--harvest-gold: #d8973cff;
+--alloy-orange: #bd632fff;
+--charcoal: #273e47ff;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: var(--harvest-gold);
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.nav-pages,.nav-user{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0 100px;
+}
+.nav-user{
+    justify-content: flex-end;
+}
+.nav-pages li,.nav-user li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 10px;
+    color: var(--charcoal);
+    transition: 0.8s;
+}
+.nav-pages a,.nav-user a{
+    text-decoration: none;
+}
+.nav-pages a li:hover,.nav-user a li:hover{
+    background-color: var(--charcoal);
+    color: white;
+    transition: 0.8s;
+}
+.contenedor{
+    width: 100%;
+    height: auto;
+    display:flex;
+    padding: 50px 70px;
+    justify-content:center;
+    align-items: center;
+}
+.contenedor-posts{
+    width: 100%;
+    height: auto;
+}
+.posts{
+    width: 95%;
+    height: auto;
+    border: 1px solid var(--charcoal);
+    margin: 20px;
+    padding: 10px;
+}
+.posts h1{
+    color: var(--vivid-burgundy);
+    padding: 10px 0;
+}
+.posts p{
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid var(--ecru);
+}
+.posts p spam{
+    color: var(--harvest-gold);
+}
+
+.sidebar{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left:30px;
+    background-color: var(--ecru);
+}
+.sidebar h2{
+    font-size: 2rem;
+    padding: 10px 0;
+    text-align: center;  
+}
+.sidebar p{
+    font-size: 1rem;
+    padding: 5px 10px;
+    text-align: center;  
+}
+.articulos{
+    width: 70%;
+    margin: 20px;
+}
+.contenido{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--harvest-gold);
+    color: var(--vivid-burgundy);
+    text-transform: capitalize;
+}
+
+/*Estilos de los formularios register y login*/
+.contenido-section{
+    width: 95%;
+    height: auto;
+}
+form{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border: 1.5px solid var(--harvest-gold);
+}
+.title-form{
+    font-size: 2em;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: var(--harvest-gold);
+    border-bottom: 1px solid var(--alloy-orange);
+}
+.form-section{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.form-section-remember-me{
+    width: 50%;
+    height: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items:center ;
+}
+.titulo{
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    color: var(--vivid-burgundy);
+}
+.btn-form{
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border: 1px solid var(--alloy-orange);
+}
+.submit-form{
+    width: 100px;
+    padding: 5px 8px;
+    color: var(--harvest-gold);
+    background-color: rgba(39, 62, 71, 0);
+    border: 1.5px solid var(--vivid-burgundy);
+    cursor: pointer;
+    transition: .3s;
+}
+.submit-form:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.section-cuenta-existente{
+    width: 100%;
+    height: auto;
+}
+.text-section-cuenta-existente{
+    text-transform: capitalize;
+    font-size: 1em;
+    color: var(--alloy-orange);
+    padding: 15px 0;
+}
+.text-section-cuenta-existente a{
+    color: var(--charcoal);
+    text-decoration: none;
+}
+.alert{
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin: 0 15px;
+    background-color: rgb(144, 255, 130);
+    color: rgb(12, 122, 12);
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+.alert-danger{
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin: 0 15px;
+    background-color: rgb(176, 61, 41);
+    color: rgb(237, 175, 7);
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+.invalid-feedback span{
+    padding: 5px;
+    color: red;
+    font-size: 1em;
+    background-color: #ffaaaa;
+}
+.forgot{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.forgot a{
+    width: 100%;
+    height: auto;    
+    margin:15px;
+    color: var(--harvest-gold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.forgot a:hover{
+    transition: 0.6s;
+    text-shadow: 0px 3px 0px var(--harvest-gold);
+    color: var(--charcoal);
+}
+
+
+
+
+
+
+
+
+
+/* Estilos responsive*/
+
+@media screen  and (max-width: 700px){
+    .contenedor{
+        flex-wrap: wrap;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    nav{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+}

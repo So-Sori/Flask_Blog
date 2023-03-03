@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{%block content%}
+<div class="contenido-section">
+
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+
+        <legend class="title-form">Log In</legend>
+
+        <div class="form-section">
+            {{ form.email.label(class = 'titulo') }}
+
+            {% if form.email.errors %}
+            {{ form.email(class = 'btn-form is-invalid') }}
+            <div class="invalid-feedback">
+                {%for error in form.email.errors%}
+                    <span>{{ error }}</span>
+                {%endfor%}
+            </div>    
+            {%else%}
+            {{ form.email(class = 'btn-form is-invalid') }}
+            {%endif%}
+        </div>
+
+        <div class="form-section">
+            {{ form.password.label(class = 'titulo') }}
+
+            {% if form.password.errors %}
+            {{ form.password(class = 'btn-form is-invalid') }}
+            <div class="invalid-feedback">
+                {%for error in form.password.errors%}
+                    <span>{{ error }}</span>
+                {%endfor%}
+            </div>    
+            {%else%}
+            {{ form.password(class = 'btn-form is-invalid') }}
+            {%endif%}
+        </div>
+        <div class="forgot"><a href="#"> Forgot password?</a></div>
+
+        <div class="form-section-remember-me">
+            {{ form.remember.label(class = 'titulo') }}
+            {{ form.remember(class = 'btn-form') }}
+        </div>
+
+        <div class="form-section">
+            {{ form.submit(class = 'submit-form') }}
+        </div>
+
+    </form>
+
+    <div class="section-cuenta-existente">
+        <p class="text-section-cuenta-existente">
+            You do not have an account? <a class="link-login" href="{{ url_for('register') }}">register</a>
+        </p>
+    </div>
+
+</div>
+{% endblock content%}
